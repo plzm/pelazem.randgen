@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Patrick El-Azem (www.linkedin.com/in/pelazem)</Authors>
+    <Company />
+    <Description>A random value generator. Generates boolean, categorical (you provide the source list), date/time, numeric, and string random values. Instantiate the individual generators or use RandomGenerator.[...] static generator properties.</Description>
+    <PackageProjectUrl>https://github.com/plzm/pelazem.rndgen</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/plzm/pelazem.rndgen</RepositoryUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>pelazem.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="pelazem.util" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
