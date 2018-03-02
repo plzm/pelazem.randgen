@@ -1,7 +1,7 @@
 ﻿using System;
 using pelazem.util;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	/// <summary>
 	/// RandomNumberGenerator is a random number generator based on 

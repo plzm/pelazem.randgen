@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using pelazem.util;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	public class CategoricalGenerator : GeneratorBase<object>
 	{

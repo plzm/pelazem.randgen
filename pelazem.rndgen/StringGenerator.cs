@@ -2,7 +2,7 @@
 using System.Text;
 using pelazem.util;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	public class StringGenerator : GeneratorBase<string>
 	{

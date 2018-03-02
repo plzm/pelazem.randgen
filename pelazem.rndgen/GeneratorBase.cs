@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	public abstract class GeneratorBase<T>
 	{

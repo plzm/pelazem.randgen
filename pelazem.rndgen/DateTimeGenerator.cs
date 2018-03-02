@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using pelazem.util;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	public class DateTimeGenerator : GeneratorBase<DateTime>
 	{

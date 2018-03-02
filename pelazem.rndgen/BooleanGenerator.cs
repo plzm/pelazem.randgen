@@ -1,7 +1,7 @@
 ﻿using System;
 using pelazem.util;
 
-namespace hoser.Generators.Random
+namespace pelazem.rndgen
 {
 	public class BooleanGenerator : GeneratorBase<bool>
 	{
