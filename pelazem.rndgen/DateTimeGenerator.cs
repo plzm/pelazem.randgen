@@ -32,12 +32,12 @@ namespace pelazem.rndgen
 
 			long diffTicks = dtEnd.Subtract(start).Ticks;
 
-			double value = RandomGenerator.Numeric.GetUniform(0, diffTicks);
+			double value = RandomGenerator.Numeric.Generator.GetUniform(0, diffTicks);
 
 			if (this.EnforceUniqueValues)
 			{
 				while (this.UniqueValues.ContainsKey(value))
-					value = RandomGenerator.Numeric.GetUniform(0, diffTicks);
+					value = RandomGenerator.Numeric.Generator.GetUniform(0, diffTicks);
 
 				this.UniqueValues.Add(value, false);
 			}
@@ -56,7 +56,7 @@ namespace pelazem.rndgen
 		{
 			long diff = maxTimeSpan.Subtract(minTimeSpan).Ticks;
 
-			long random = Converter.GetInt64(RandomGenerator.Numeric.GetUniform(0, Converter.GetDouble(diff)));
+			long random = Converter.GetInt64(RandomGenerator.Numeric.Generator.GetUniform(0, Converter.GetDouble(diff)));
 
 			TimeSpan rnd = new TimeSpan(random);
 

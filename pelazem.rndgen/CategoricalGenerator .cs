@@ -65,7 +65,7 @@ namespace pelazem.rndgen
 
 		private int GetIndex(int minValue, int maxValue)
 		{
-			return Converter.GetInt32(RandomGenerator.Numeric.GetUniform(minValue, maxValue));
+			return Converter.GetInt32(RandomGenerator.Numeric.Generator.GetUniform(minValue, maxValue));
 		}
 
 		private List<Category<T>> GetNormalizedWeightedCategoricalValues<T>(IEnumerable<Category<T>> weightedCategoricalValues)

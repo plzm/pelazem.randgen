@@ -63,7 +63,7 @@ namespace pelazem.rndgen
 			if (this.PercentChanceEmpty == 100)
 				itsEmpty = true;
 			else if (this.PercentChanceEmpty > 0)
-				itsEmpty = (RandomGenerator.Numeric.GetUniform(0, 100) <= this.PercentChanceEmpty);
+				itsEmpty = (RandomGenerator.Numeric.Generator.GetUniform(0, 100) <= this.PercentChanceEmpty);
 			else
 				itsEmpty = false;   // Just being explicit...
 
