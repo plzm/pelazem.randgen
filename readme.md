@@ -6,7 +6,21 @@ Instantiate the generators directly or, for simplicity, use RandomGenerator.[typ
 
 Implemented as a .NET Standard 2.0 DLL. For compatibility info, see https://docs.microsoft.com/dotnet/standard/net-standard
 
----
+-----------------------------
+
+Specific to the NumericGenerator class:
+Originally written by John D. Cook
+
+http://www.johndcook.com
+
+https://www.codeproject.com/kb/recipes/simplerng.aspx
+
+
+Modifications by Patrick El-Azem, including the functionality in GeneratorBase() as well as GetUniform() overload, addition of GetBoolean(), and a few other minor tweaks.
+
+Implemented as a .NET Standard 2.0 DLL. For compatibility info, see https://docs.microsoft.com/dotnet/standard/net-standard
+
+-----------------------------
 
 # PLEASE NOTE STANDARD DISCLAIMER FOR THE ENTIRETY OF THIS REPOSITORY AND ALL ASSETS
 ## 1. No warranties or guarantees are made or implied.

@@ -24,7 +24,7 @@ namespace pelazem.rndgen
 
 		private int GetLength(int minLength, int maxLength)
 		{
-			int result = Converter.GetInt32(RandomGenerator.Numeric.Generator.GetUniform(minLength, maxLength));
+			int result = Converter.GetInt32(RandomGenerator.Numeric.GetUniform(minLength, maxLength));
 			return result;
 		}
 
@@ -44,7 +44,7 @@ namespace pelazem.rndgen
 			StringBuilder sb = new StringBuilder(length);
 
 			for (int i = 1; i <= length; i++)
-				sb.Append((char)Converter.GetInt32(RandomGenerator.Numeric.Generator.GetUniform(_charMin, _charMax)));
+				sb.Append((char)Converter.GetInt32(RandomGenerator.Numeric.GetUniform(_charMin, _charMax)));
 
 			return sb.ToString();
 		}
