@@ -22,12 +22,15 @@ namespace pelazem.rndgen
 
 		public T GetCategorical<T>(IEnumerable<T> categoricalValues)
 		{
-			int count = categoricalValues.Count();
-
-			if (categoricalValues == null || count == 0 || this.UseEmpty())
+			if (categoricalValues == null)
 				return default(T);
 
-			int index = GetIndex(0, count);
+			int count = categoricalValues.Count();
+
+			if (count == 0 || this.UseEmpty())
+				return default(T);
+
+			int index = this.GetIndex(0, count);
 
 			return categoricalValues.ElementAt(index);
 		}
