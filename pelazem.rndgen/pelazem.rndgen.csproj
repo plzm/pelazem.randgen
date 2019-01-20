@@ -11,13 +11,13 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>pelazem.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
-    <Version>1.4.1</Version>
+    <Version>1.4.2</Version>
     <LangVersion>latest</LangVersion>
-    <AssemblyVersion>1.4.1.0</AssemblyVersion>
+    <AssemblyVersion>1.4.2.0</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="pelazem.util" Version="2.2.0" />
+    <PackageReference Include="pelazem.util" Version="2.4.0" />
   </ItemGroup>
 
 </Project>
