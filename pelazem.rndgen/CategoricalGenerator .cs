@@ -95,7 +95,7 @@ namespace pelazem.rndgen
 			double normalizerWeight = values.First().RelativeWeight / 10.0;
 
 			// Set each value's weighted count
-			values.AsParallel().ForAll(v => v.WeightedCount = Converter.GetInt32(v.RelativeWeight / normalizerWeight));
+			values.ForEach(v => v.WeightedCount = Converter.GetInt32(v.RelativeWeight / normalizerWeight));
 
 			// Set each allowable value's range min and max in accordance with its weighted value
 			// This is to allow random selection
@@ -105,7 +105,7 @@ namespace pelazem.rndgen
 			{
 				category.RangeMin = rangeCounter;
 				category.RangeMax = category.RangeMin + category.WeightedCount - 1;
-				rangeCounter += category.RangeMax + 1;
+				rangeCounter = category.RangeMax + 1;
 			}
 
 			return values;
