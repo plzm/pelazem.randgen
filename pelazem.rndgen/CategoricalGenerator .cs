@@ -15,7 +15,7 @@ namespace pelazem.rndgen
 			if (categoricalValues == null || categoricalValues.Count == 0 || this.UseEmpty())
 				return this.EmptyValue;
 
-			int index = GetIndex(0, categoricalValues.Count);
+			int index = GetIndex(categoricalValues.Count);
 
 			return categoricalValues[index];
 		}
@@ -30,7 +30,7 @@ namespace pelazem.rndgen
 			if (count == 0 || this.UseEmpty())
 				return default(T);
 
-			int index = this.GetIndex(0, count);
+			int index = this.GetIndex(count);
 
 			return categoricalValues.ElementAt(index);
 		}
@@ -56,9 +56,9 @@ namespace pelazem.rndgen
 
 			List<Category<T>> normalizedValues = GetNormalizedWeightedCategoricalValues(weightedCategoricalValues);
 
-			int index = GetIndex(0, normalizedValues.Last().RangeMax + 1);
+			int catValue = Converter.GetInt32(RandomGenerator.Numeric.GetUniform(0, normalizedValues.Last().RangeMax + 1));
 
-			Category<T> pick = normalizedValues.FirstOrDefault(v => v.RangeMin <= index && index <= v.RangeMax);
+			Category<T> pick = normalizedValues.FirstOrDefault(v => v.RangeMin <= catValue && catValue <= v.RangeMax);
 
 			if (pick == null)
 				return default(T);
@@ -66,9 +66,9 @@ namespace pelazem.rndgen
 				return pick.Value;
 		}
 
-		private int GetIndex(int minValue, int maxValue)
+		private int GetIndex(int count)
 		{
-			return Converter.GetInt32(RandomGenerator.Numeric.GetUniform(minValue, maxValue));
+			return Converter.GetInt32(RandomGenerator.Numeric.GetUniform(0, count - 1));
 		}
 
 		private List<Category<T>> GetNormalizedWeightedCategoricalValues<T>(IEnumerable<Category<T>> weightedCategoricalValues)
